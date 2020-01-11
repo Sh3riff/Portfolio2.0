@@ -1,0 +1,109 @@
+@import "variables";
+@import "mixins";
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    color: $color-dark;
+}
+
+.show {
+    display: block;
+}
+
+.unshow {
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    border: 5px solid $color-accent;
+    border-radius: 10%;
+
+    @include tabzero {
+        border-width: 10px;
+    }
+
+    @include landscape {
+        border-radius: 0;
+        border-width: 0;
+    }
+}
+
+.phonebtn {
+    border: 2px solid $color-accent;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1.5%;
+    left: calc(50% - 7.5vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tabzero {
+        border-width: 5px;
+    }
+
+    @include landscape {
+        display: none;
+    }
+
+    .switch{
+        background-color: $color-dark;
+        width: 13vw;
+        height: 13vw;
+        border-radius: 50%;
+
+        input{
+            opacity: 0;
+        }
+    }
+}
+
+#homePage {
+    padding: 5%;
+    height: calc(100% - 17vw);
+    width: 100%;
+    border-top-right-radius: 9%;
+    border-top-left-radius: 9%;
+    border-bottom: 2px solid $color-dark;
+    background-color: $color-light;
+
+    @include landscape {
+        height: 90%;
+        border-radius: 0;
+        border-bottom-width: 0;
+    }
+}
+
+nav.phonenav{
+    @extend #homePage;
+    background-color: yellow;
+
+    @include landscape {
+        display: none;
+    }
+}
+
+nav.desktopnav{
+    @extend #homePage;
+    display: none;
+
+    @include landscape {
+        display: block;
+        height: 10%;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        background-color: $color-dark;
+    }
+
+    h2 {
+        color: $color-light;
+    }
+}

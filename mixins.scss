@@ -1,0 +1,12 @@
+@mixin landscape {
+    @media (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin tabzero {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+

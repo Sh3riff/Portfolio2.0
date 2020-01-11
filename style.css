@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000c18;
+}
+
+.show {
+  display: block;
+}
+
+.unshow {
+  display: none;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  border: 5px solid #5a1426;
+  border-radius: 10%;
+}
+
+@media (min-width: 600px) {
+  .container {
+    border-width: 10px;
+  }
+}
+
+@media (orientation: landscape) {
+  .container {
+    border-radius: 0;
+    border-width: 0;
+  }
+}
+
+.phonebtn {
+  border: 2px solid #5a1426;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1.5%;
+  left: calc(50% - 7.5vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 600px) {
+  .phonebtn {
+    border-width: 5px;
+  }
+}
+
+@media (orientation: landscape) {
+  .phonebtn {
+    display: none;
+  }
+}
+
+.phonebtn .switch {
+  background-color: #000c18;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+}
+
+.phonebtn .switch input {
+  opacity: 0;
+}
+
+#homePage, nav.phonenav, nav.desktopnav {
+  padding: 5%;
+  height: calc(100% - 17vw);
+  width: 100%;
+  border-top-right-radius: 9%;
+  border-top-left-radius: 9%;
+  border-bottom: 2px solid #000c18;
+  background-color: white;
+}
+
+@media (orientation: landscape) {
+  #homePage, nav.phonenav, nav.desktopnav {
+    height: 90%;
+    border-radius: 0;
+    border-bottom-width: 0;
+  }
+}
+
+nav.phonenav {
+  background-color: yellow;
+}
+
+@media (orientation: landscape) {
+  nav.phonenav {
+    display: none;
+  }
+}
+
+nav.desktopnav {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  nav.desktopnav {
+    display: block;
+    height: 10%;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    background-color: #000c18;
+  }
+}
+
+nav.desktopnav h2 {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
