@@ -95,10 +95,6 @@
   }
 }
 
-nav.phonenav {
-  background-color: yellow;
-}
-
 @media (orientation: landscape) {
   nav.phonenav {
     display: none;

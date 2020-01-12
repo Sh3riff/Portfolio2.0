@@ -4,11 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const menuPage = document.querySelector('#mobileNav');
         const phoneHome = document.querySelector('#homePage');
         if(phonebtn.checked){           
-            phoneHome.className = 'unshow'
-            menuPage.className = 'show'
+            phoneHome.classList.remove('show')
+            phoneHome.classList.add('unshow')
+            menuPage.classList.remove('unshow')
+            menuPage.classList.add('show')
         }else {
-            menuPage.className = 'unshow'
-            phoneHome.className = 'show'
+            menuPage.classList.remove('show')
+            menuPage.classList.add('unshow')
+            phoneHome.classList.remove('unshow')
+            phoneHome.classList.add('show')
         }
     })
 

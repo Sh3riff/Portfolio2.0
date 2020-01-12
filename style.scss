@@ -83,7 +83,6 @@
 
 nav.phonenav{
     @extend #homePage;
-    background-color: yellow;
 
     @include landscape {
         display: none;
