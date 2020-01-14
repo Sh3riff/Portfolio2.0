@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             phoneHome.classList.remove('unshow')
             phoneHome.classList.add('show')
         }
-    })
+    });
 
     (function showTime (){
         let timeNow = new Date();
@@ -35,24 +35,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }      
         };
         const hr = hourFormat;
-        const traytime = document.querySelector('.traytime')
-        const maintime = document.querySelector('.maintime')
-        const date = document.querySelector('.date')
+        const traytime = document.querySelector('.traytime');
+        const maintime = document.querySelector('.maintime');
+        const maindate = document.querySelector('.maindate');
+        let sec = timeNow.getSeconds();
         let min = timeNow.getMinutes();
         let hour = timeNow.getHours();
-        let hrMin = `${hr(hour)}:${aZ(min)}`      
+        let hrMin = `${hr(hour)}:${aZ(min)}`;    
+        let hrMinSec = `${hr(hour)}:${aZ(min)}:${aZ(sec)}`;    
         let fulldate = timeNow.toDateString();
-        let fulltime = timeNow.toLocaleTimeString();
-        
+        let fulltime = timeNow.toLocaleTimeString();        
         traytime.innerHTML = `${hrMin}`;
-        maintime.innerHTML = `${fulltime}`;
-        date.innerHTML = `${fulldate}`;
-        
-        // time.innerHTML = `${hour}<span>:</span>${aZ(min)}<span>:</span>${aZ(sec)}`;
-
+        maintime.innerHTML = `${hrMinSec}`;
+        maindate.innerHTML = `${fulldate}`;
         setTimeout(showTime, 1000);
     }());
 
+    (function timeOfTheDay (){
+            let greet = new Date();
+            let hour = greet.getHours();
+            let greetTime = document.querySelector('.greet')    
+            if (hour < 12){
+                greetTime.innerText = 'Good Morning'
+            }else if(hour < 18){
+                greetTime.innerText = 'Good Afternoon'
+            }else{
+                greetTime.innerText = 'Good Evening'
+            }
+        }())
 
     
 })

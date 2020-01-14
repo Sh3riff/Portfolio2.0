@@ -7,6 +7,7 @@
     list-style-type: none;
     box-sizing: border-box;
     color: $color-dark;
+    font-family: 'Gugi', cursive;
 }
 
 .show {
@@ -35,27 +36,57 @@ svg {
 }
 
 .toptray {
-    height: 5%;
-    width: 100%;
+    height: 3%;
+    width: 84%;
+    left: 8%;
     background-color: transparent;
     position: absolute;
     margin-top: 1%;
+    z-index: 1;
 
-    @include tabzero{
+    @include tabmini{
         margin-top: 0.2%;
     }
+
+    @include landscape {
+        height: 5%;
+        width: 100%;
+        left: 0;
+        background-color: $color-dark;
+    }
+
+    time{
+        color: $color-dark;
+        padding-right: 57%;
+        @include tabmini {
+            padding-right: 64%;
+        }
+        @include landscape {
+            padding-right: 80%;
+            color: $color-light;
+        }
+    }
     span {
-        padding: 0 5% 0;
+        padding: 0 7% 0 0;
+        @include landscape {
+            padding: 0 3.5% 0 0;
+        }
+
+        
     }
     
-    .battery, .bluetooth, .network, .wifi, .traytime{
+    .battery, .bluetooth, .network, .wifi{
         fill: $color-dark;
         height: 15px;
         width: 15px;
 
-        @include tabzero{
+        @include tabmini{
             height: 25px;
             width: 25px;
+        }
+
+        @include landscape {
+            fill: $color-light;
         }
     }
 }
@@ -74,7 +105,7 @@ svg {
     justify-content: center;
     align-items: center;
 
-    @include tabzero {
+    @include tabmini {
         border-width: 5px;
     }
 
@@ -95,19 +126,151 @@ svg {
 }
 
 #homePage {
-    padding: 5%;
     height: calc(100% - 17vw);
     width: 100%;
     border-top-right-radius: 9%;
     border-top-left-radius: 9%;
     border-bottom: 2px solid $color-dark;
-    background-color: $color-light;
 
     @include landscape {
         height: 90%;
         border-radius: 0;
-        border-bottom-width: 0;
     }
+
+    .hometime{
+        height: 20%;
+        position: relative;
+        top: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include landscape {
+            top: 10%;
+        }
+        
+        .maintime {
+            font-size: 3rem;
+            display: block;
+            
+            @include tabmini{
+                font-size: 5rem;
+            }
+
+            @include tabnorm{
+                font-size: 7.5rem;
+            }
+
+            @include landscape {
+                font-size: 3rem;
+            }
+
+        }
+
+        .maindate {
+            font-size: 1rem;
+
+            @include tabmini{
+                font-size: 1.5rem;
+            }
+
+            @include tabnorm{
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .user{
+        background-color: $color-dark;
+        height: 40%;
+        position: relative;
+        top: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .greet{
+            color: $color-light;
+            font-size: 1.2rem;
+
+            @include tabmini{
+                font-size: 1.8rem;
+            }
+
+            @include tabnorm{
+                font-size: 2.7rem;
+            }
+
+            @include landscape{
+                font-size: 2.2rem;
+            }
+        }
+
+        .name{
+            color: $color-light;
+            font-size: 3rem;
+
+            @include tabmini{
+                font-size: 4.5rem;
+            }
+
+            @include tabnorm{
+                font-size: 7rem;
+            }
+
+            @include landscape {
+                font-size: 5rem;
+                color: $color-accent;
+            }
+        }
+    }
+    
+    .abt{
+        position: relative;
+        top: 15%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .intro{
+            font-size: 1rem;
+
+            @include tabmini{
+                font-size: 2rem;
+            }
+
+            @include tabnorm{
+                font-size: 2.2rem;
+            }
+
+            @include landscape{
+                font-size: 1.5rem;
+            }
+        }
+
+        .moreintro{
+            font-size: 1.5rem;
+
+            @include tabmini{
+                font-size: 2.5rem;
+            }
+
+            @include tabnorm{
+                font-size: 3.5rem;
+            }
+
+            @include landscape {
+                font-size: 2.5rem;
+            }
+        }
+
+        
+    }
+        
 }
 
 nav.phonenav{
@@ -128,10 +291,19 @@ nav.desktopnav{
         padding: 0;
         position: fixed;
         bottom: 0;
+        background-color: $color-accent;
+    }
+
+    .innerdesktopnav{
+        width: 99%;
+        height: 80%;
+        position: relative;
+        left: .5%;
+        top: 10%;
         background-color: $color-dark;
     }
 
-    h2 {
-        color: $color-light;
-    }
+    // h2 {
+    //     color: $color-light;
+    // }
 }

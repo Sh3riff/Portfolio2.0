@@ -65,26 +65,34 @@
 
     <div class="container" >
         <header class="toptray">
-            <span ><time class="traytime"></time></span>            
+            <time class="traytime">00:00</time>           
             <span><svg x="0" y="0" class="bluetooth"><use href="#bluetooth"></use></svg></span>
             <span><svg x="0" y="0" class="network"><use href="#network"></use></svg></span>
             <span><svg x="10" y="0" class="wifi"><use href="#wifi"></use></svg></span> 
             <span><svg x="0" y="0" class="battery"><use href="#battery"></use></svg></span>
         </header>
 
-        <main class="profilehome show" id="homePage">
-            <h1 class="greet">Good day</h1>
-            <h1 class="name">guest</h1>
-            <h1 class="intro">welcome to my web developer portfolio.</h1>
-            <h2 class="moreintro"><i>I hope you enjoy your stay here.</i></h2>
-            <time class="maintime"></time>
-            <time class="date"></time>
+        <main class="apphome show" id="homePage">
+            <section class="hometime">
+                <h1 class="maintime"><time>00:00</time></h1>
+                <time class="maindate">00:00</time>
+            </section>
+            <section class="user">
+                <h3 class="greet">.</h3> <br>
+                <h3 class="name">[Enter name]</h3>
+            </section>
+            <section class="abt">
+                <h1 class="intro">welcome to my web dev portfolio.</h1><br>
+                <h2 class="moreintro">Stay tuned and have fun.</h2>
+            </section>
         </main>
         <nav  class="phonenav unshow" id="mobileNav">
             <h2>this is the nav icon section</h2>
         </nav>
         <nav class="desktopnav">
-            <h2>this is the desktop nav icon section</h2>
+            <div class="innerdesktopnav">
+                <h2>this is the desktop nav icon section</h2>
+            </div>
         </nav>
         <div class="phonebtn">            
             <label class="switch">
