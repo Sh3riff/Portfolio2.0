@@ -290,7 +290,6 @@ svg {
 @media (orientation: landscape) {
   #homePage .user .name, nav.phonenav .user .name, nav.desktopnav .user .name {
     font-size: 5rem;
-    color: #5a1426;
   }
 }
 
