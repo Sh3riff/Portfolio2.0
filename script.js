@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         const hr = hourFormat;
         const traytime = document.querySelector('.traytime');
+        const navtime = document.querySelector('.navtime');
         const maintime = document.querySelector('.maintime');
         const maindate = document.querySelector('.maindate');
         let sec = timeNow.getSeconds();
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let fulldate = timeNow.toDateString();
         let fulltime = timeNow.toLocaleTimeString();        
         traytime.innerHTML = `${hrMin}`;
+        navtime.innerHTML = `${hrMin}`;
         maintime.innerHTML = `${hrMinSec}`;
         maindate.innerHTML = `${fulldate}`;
         setTimeout(showTime, 1000);

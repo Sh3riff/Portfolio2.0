@@ -49,10 +49,7 @@ svg {
     }
 
     @include landscape {
-        height: 5%;
-        width: 100%;
-        left: 0;
-        background-color: $color-dark;
+        display: none;
     }
 
     time{
@@ -300,6 +297,29 @@ nav.desktopnav{
         left: .5%;
         top: 10%;
         background-color: $color-dark;
+
+        .navtray{
+            height: 60%;
+            width: 15%;
+            position: absolute;
+            right: 0;
+            top: 20%;
+            span{
+                padding: 0 15% 0 0;
+            }
+            .battery, .bluetooth, .network, .wifi{
+                fill: $color-light;
+                height: 20px;
+                width: 20px;
+                position: absolute;
+                top: 10%;
+            }
+            .navtime{
+                color: $color-light;
+                font-size: 1.5rem;
+                
+            }
+        }
     }
 
     // h2 {

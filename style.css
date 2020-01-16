@@ -52,10 +52,7 @@ svg {
 
 @media (orientation: landscape) {
   .toptray {
-    height: 5%;
-    width: 100%;
-    left: 0;
-    background-color: #000c18;
+    display: none;
   }
 }
 
@@ -384,5 +381,30 @@ nav.desktopnav .innerdesktopnav {
   left: .5%;
   top: 10%;
   background-color: #000c18;
+}
+
+nav.desktopnav .innerdesktopnav .navtray {
+  height: 60%;
+  width: 15%;
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+
+nav.desktopnav .innerdesktopnav .navtray span {
+  padding: 0 15% 0 0;
+}
+
+nav.desktopnav .innerdesktopnav .navtray .battery, nav.desktopnav .innerdesktopnav .navtray .bluetooth, nav.desktopnav .innerdesktopnav .navtray .network, nav.desktopnav .innerdesktopnav .navtray .wifi {
+  fill: white;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 10%;
+}
+
+nav.desktopnav .innerdesktopnav .navtray .navtime {
+  color: white;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
