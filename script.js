@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+
+        screen.orientation.lock('natural');
+
     const phonebtn = document.querySelector('#phonebtn');
     phonebtn.addEventListener('change', e => {
         const menuPage = document.querySelector('#mobileNav');
@@ -62,7 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }else{
                 greetTime.innerText = 'Good Evening'
             }
-        }())
+        }());
 
-    
+        const appuser = document.querySelector('#appuser');
+    (function getAppUserName() {
+        if(localStorage.getItem('appuser')){
+            appuser.innerText = localStorage.getItem('appuser');
+            appuser.contentEditable = false;
+        }else {
+            appuser.innerText = '[Enter name]'
+        }
+
+        appuser.addEventListener('blur', e => {
+            if(e.type === 'blur'){
+                localStorage.setItem('appuser', e.target.innerText);
+                appuser.contentEditable = false;
+            }
+        })
+        appuser.addEventListener('keypress', e => {
+                if (e.keyCode == 13){
+                    localStorage.setItem('appuser', e.target.innerText);
+                    appuser.blur();
+                }
+        })
+    }());
+
 })
