@@ -25,7 +25,7 @@ svg {
   height: 100vh;
   width: 100vw;
   border: 2vw solid #5a1426;
-  border-radius: 5%;
+  border-radius: 10vw;
   position: relative;
 }
 
@@ -60,19 +60,12 @@ svg {
 
 .toptray time {
   color: #000c18;
-  padding-right: 57%;
+  padding-right: 63%;
 }
 
 @media (min-width: 600px) {
   .toptray time {
-    padding-right: 64%;
-  }
-}
-
-@media (orientation: landscape) {
-  .toptray time {
-    padding-right: 80%;
-    color: white;
+    padding-right: 70%;
   }
 }
 
@@ -80,10 +73,8 @@ svg {
   padding: 0 7% 0 0;
 }
 
-@media (orientation: landscape) {
-  .toptray span {
-    padding: 0 3.5% 0 0;
-  }
+.toptray .last {
+  padding: 0;
 }
 
 .toptray .battery, .toptray .bluetooth, .toptray .network, .toptray .wifi {
@@ -96,12 +87,6 @@ svg {
   .toptray .battery, .toptray .bluetooth, .toptray .network, .toptray .wifi {
     height: 25px;
     width: 25px;
-  }
-}
-
-@media (orientation: landscape) {
-  .toptray .battery, .toptray .bluetooth, .toptray .network, .toptray .wifi {
-    fill: white;
   }
 }
 
@@ -373,6 +358,10 @@ nav.phonenav .searchfield {
   margin-bottom: 3%;
 }
 
+nav.phonenav .appid {
+  position: relative;
+}
+
 nav.phonenav .appicons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -419,11 +408,22 @@ nav.phonenav .iconnames {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  top: 22vw;
+  font-size: 2.5vw;
+  height: 100%;
+  width: 100%;
+  top: 16vw;
+  left: 7%;
 }
 
 nav.phonenav .iconnames span {
+  width: 15vw;
   padding: 0% 14% 25% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (orientation: landscape) {
