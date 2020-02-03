@@ -111,7 +111,7 @@ svg {
   height: 15vw;
   border-radius: 50%;
   position: absolute;
-  bottom: 2%;
+  bottom: 1%;
   left: calc(50% - 7.5vw);
   display: -webkit-box;
   display: -ms-flexbox;
