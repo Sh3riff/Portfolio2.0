@@ -6,6 +6,7 @@
           box-sizing: border-box;
   color: #000c18;
   font-family: 'Gugi', cursive;
+  outline: none;
 }
 
 .show {
@@ -24,7 +25,7 @@ svg {
   height: 100vh;
   width: 100vw;
   border: 2vw solid #5a1426;
-  border-radius: 10%;
+  border-radius: 5%;
 }
 
 @media (orientation: landscape) {
@@ -109,7 +110,7 @@ svg {
   height: 15vw;
   border-radius: 50%;
   position: absolute;
-  bottom: 1.5%;
+  bottom: 2%;
   left: calc(50% - 7.5vw);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,10 +147,8 @@ svg {
 }
 
 #homePage, nav.phonenav, nav.desktopnav {
-  height: calc(100% - 17vw);
+  height: calc(100% - 18vw);
   width: 100%;
-  border-top-right-radius: 9%;
-  border-top-left-radius: 9%;
   border-bottom: 2px solid #000c18;
 }
 
@@ -353,6 +352,79 @@ svg {
   }
 }
 
+nav.phonenav {
+  position: relative;
+  top: 5%;
+  height: calc(95% - 18vw);
+}
+
+nav.phonenav .searchfield {
+  width: 80%;
+  height: 6vh;
+  border: 5px solid #5a1426;
+  border-radius: 3vh;
+  background-color: #000c18;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  position: relative;
+  left: 10%;
+  margin-bottom: 3%;
+}
+
+nav.phonenav .appicons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: auto;
+}
+
+nav.phonenav .appicons span {
+  padding: 0% 14% 25% 5%;
+}
+
+nav.phonenav .appicons .calculator, nav.phonenav .appicons .settings, nav.phonenav .appicons .bluetooth, nav.phonenav .appicons .network, nav.phonenav .appicons .wifi, nav.phonenav .appicons .battery, nav.phonenav .appicons .text {
+  fill: #000c18;
+}
+
+nav.phonenav .appicons .sh3rifficon, nav.phonenav .appicons .calculator, nav.phonenav .appicons .settings, nav.phonenav .appicons .bluetooth, nav.phonenav .appicons .network, nav.phonenav .appicons .wifi, nav.phonenav .appicons .battery {
+  width: 15%;
+  height: 15vw;
+  position: absolute;
+  background-color: white;
+  padding: 1vw;
+  border: 0.25rem solid #000c18;
+  border-radius: 50%;
+}
+
+@media (min-width: 600px) {
+  nav.phonenav .appicons .sh3rifficon, nav.phonenav .appicons .calculator, nav.phonenav .appicons .settings, nav.phonenav .appicons .bluetooth, nav.phonenav .appicons .network, nav.phonenav .appicons .wifi, nav.phonenav .appicons .battery {
+    border: 0.35rem solid #000c18;
+  }
+}
+
+@media (min-width: 800px) {
+  nav.phonenav .appicons .sh3rifficon, nav.phonenav .appicons .calculator, nav.phonenav .appicons .settings, nav.phonenav .appicons .bluetooth, nav.phonenav .appicons .network, nav.phonenav .appicons .wifi, nav.phonenav .appicons .battery {
+    border: 0.45rem solid #000c18;
+  }
+}
+
+nav.phonenav .iconnames {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  top: 22vw;
+}
+
+nav.phonenav .iconnames span {
+  padding: 0% 14% 25% 5%;
+}
+
 @media (orientation: landscape) {
   nav.phonenav {
     display: none;
@@ -375,12 +447,42 @@ nav.desktopnav {
 }
 
 nav.desktopnav .innerdesktopnav {
-  width: 99%;
+  width: 98%;
   height: 80%;
   position: relative;
-  left: .5%;
+  left: 1%;
   top: 10%;
   background-color: #000c18;
+  border-radius: 4vh;
+}
+
+nav.desktopnav .innerdesktopnav .appicons {
+  position: absolute;
+  height: 100%;
+  width: 84%;
+  left: 1%;
+  top: 15%;
+}
+
+nav.desktopnav .innerdesktopnav .appicons span {
+  padding: 0 5% 0 0;
+}
+
+nav.desktopnav .innerdesktopnav .appicons .sh3rifficon {
+  background-color: white;
+  border: 1px #5a1426 solid;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+nav.desktopnav .innerdesktopnav .appicons .calculator, nav.desktopnav .innerdesktopnav .appicons .settings, nav.desktopnav .innerdesktopnav .appicons .windows {
+  fill: white;
+}
+
+nav.desktopnav .innerdesktopnav .appicons .sh3rifficon, nav.desktopnav .innerdesktopnav .appicons .calculator, nav.desktopnav .innerdesktopnav .appicons .settings, nav.desktopnav .innerdesktopnav .appicons .windows {
+  height: 80%;
+  width: 6.4vh;
+  position: absolute;
 }
 
 nav.desktopnav .innerdesktopnav .navtray {
@@ -397,8 +499,8 @@ nav.desktopnav .innerdesktopnav .navtray span {
 
 nav.desktopnav .innerdesktopnav .navtray .battery, nav.desktopnav .innerdesktopnav .navtray .bluetooth, nav.desktopnav .innerdesktopnav .navtray .network, nav.desktopnav .innerdesktopnav .navtray .wifi {
   fill: white;
-  height: 20px;
-  width: 20px;
+  height: 3.2vh;
+  width: 3.2vh;
   position: absolute;
   top: 10%;
 }

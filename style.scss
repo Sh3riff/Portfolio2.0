@@ -8,6 +8,7 @@
     box-sizing: border-box;
     color: $color-dark;
     font-family: 'Gugi', cursive;
+    outline: none;
 }
 
 .show {
@@ -27,7 +28,7 @@ svg {
     height: 100vh;
     width: 100vw;
     border: 2vw solid $color-accent;
-    border-radius: 10%;
+    border-radius: 5%;
 
     @include landscape {
         border-radius: 0;
@@ -96,7 +97,7 @@ svg {
     height: 15vw;
     border-radius: 50%;
     position: absolute;
-    bottom: 1.5%;
+    bottom: 2%;
     left: calc(50% - 7.5vw);
     display: flex;
     justify-content: center;
@@ -123,10 +124,8 @@ svg {
 }
 
 #homePage {
-    height: calc(100% - 17vw);
+    height: calc(100% - 18vw);
     width: 100%;
-    border-top-right-radius: 9%;
-    border-top-left-radius: 9%;
     border-bottom: 2px solid $color-dark;
 
     @include landscape {
@@ -271,11 +270,74 @@ svg {
 
 nav.phonenav{
     @extend #homePage;
+    position: relative;
+    top: 5%;
+    height: calc(95% - 18vw);
+    // background-image: url(./img.jpg);
 
+        .searchfield{
+            width: 80%;
+            height: 6vh;
+            border: 5px solid $color-accent;
+            border-radius: 3vh;
+            background-color: $color-dark;
+            color: $color-light;
+            font-size: 1.5rem;
+            padding: 10px;
+            position: relative;
+            left: 10%;
+            margin-bottom: 3%;
+        }
+        
+        .appicons{
+            display: flex;
+            flex-wrap: wrap;
+            overflow: auto;
+            
+            span{
+                padding: 0% 14% 25% 5%;
+            }
+        
+            .calculator, .settings, .bluetooth, .network, .wifi, .battery, .text{
+                fill: $color-dark;
+            }
+                 
+            .sh3rifficon, .calculator, .settings, .bluetooth, .network, .wifi, .battery{
+                width: 15%;
+                height: 15vw;
+                position: absolute;
+                background-color: $color-light;
+                padding: 1vw;
+                border: .25rem solid $color-dark;
+                border-radius: 50%;
+
+                @include tabmini{
+                    border: .35rem solid $color-dark;
+                }
+                @include tabnorm{
+                    border: .45rem solid $color-dark;
+                }
+
+            }
+        }
+
+        .iconnames{
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            top: 22vw;
+
+            span{
+                padding: 0% 14% 25% 5%;
+            }
+        }
+
+            
     @include landscape {
         display: none;
     }
 }
+
 
 nav.desktopnav{
     @extend #homePage;
@@ -291,12 +353,43 @@ nav.desktopnav{
     }
 
     .innerdesktopnav{
-        width: 99%;
+        width: 98%;
         height: 80%;
         position: relative;
-        left: .5%;
+        left: 1%;
         top: 10%;
         background-color: $color-dark;
+        border-radius: 4vh;
+
+        .appicons{
+            position: absolute;
+            height: 100%;
+            width: 84%;
+            left: 1%;
+            top: 15%;
+
+            span{
+                padding: 0 5% 0 0;
+            }
+
+            .sh3rifficon {
+                background-color: $color-light;
+                border: 1px $color-accent solid;
+                border-radius: 50%;
+                padding: 2px;
+            }
+
+            .calculator, .settings, .windows {
+                fill: $color-light;
+            }
+
+            .sh3rifficon, .calculator, .settings, .windows {
+                height: 80%;
+                width: 6.4vh;
+                position: absolute;
+            }
+
+        }
 
         .navtray{
             height: 60%;
@@ -309,8 +402,8 @@ nav.desktopnav{
             }
             .battery, .bluetooth, .network, .wifi{
                 fill: $color-light;
-                height: 20px;
-                width: 20px;
+                height: 3.2vh;
+                width: 3.2vh;
                 position: absolute;
                 top: 10%;
             }
@@ -322,7 +415,5 @@ nav.desktopnav{
         }
     }
 
-    // h2 {
-    //     color: $color-light;
-    // }
+    
 }
