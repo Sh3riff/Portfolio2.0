@@ -84,7 +84,7 @@ svg {
 
 
 .phonebtn {
-    border: 2px solid $color-accent;
+    border: .6vw solid $color-accent;
     width: 15vw;
     height: 15vw;
     border-radius: 50%;
@@ -94,10 +94,6 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @include tabmini {
-        border-width: 5px;
-    }
 
     @include landscape {
         display: none;
@@ -118,7 +114,7 @@ svg {
 #homePage {
     height: calc(100% - 18vw);
     width: 100%;
-    border-bottom: 2px solid $color-dark;
+    border-bottom: .5vh solid $color-dark;
 
     @include landscape {
         height: 90%;
@@ -278,62 +274,66 @@ nav.phonenav{
             padding: 10px;
             position: relative;
             left: 10%;
-            margin-bottom: 3%;
+            margin-bottom: 2vh;
         }
 
         .appid{
             position: relative;
-        }
-        
-        .appicons{
-            display: flex;
-            flex-wrap: wrap;
-            overflow: auto;
-            
-            span{
-                padding: 0% 14% 25% 5%;
-            }
-        
-            .calculator, .settings, .bluetooth, .network, .wifi, .battery, .text{
-                fill: $color-dark;
-            }
-                 
-            .sh3rifficon, .calculator, .settings, .bluetooth, .network, .wifi, .battery{
-                width: 15%;
-                height: 15vw;
-                position: absolute;
-                background-color: $color-light;
-                padding: 1vw;
-                border: .25rem solid $color-dark;
-                border-radius: 50%;
-
-                @include tabmini{
-                    border: .35rem solid $color-dark;
-                }
-                @include tabnorm{
-                    border: .45rem solid $color-dark;
-                }
-
-            }
-        }
-
-        .iconnames{
-            position: absolute;
-            display: flex;
-            flex-wrap: wrap;
-            font-size: 2.5vw;
-            height: 100%;
+            height: calc(84vh - 18vw);
             width: 100%;
-            top: 16vw;
-            left: 7%;
+            overflow-y: auto;
+            overflow-x: hidden;
 
-            span{
-                width: 15vw;
-                padding: 0% 14% 25% 5%;
+            .appicons{
                 display: flex;
-                justify-content: center;
+                flex-wrap: wrap;
+                overflow: auto;
+                
+                span{
+                    height: 15vw;
+                    width: 15vw;
+                    margin: 10vw 0 0 3.5vw;
+
+                    &:nth-child(-n+5) {
+                        margin-top: 0;
+                    }
+                }
+                     
+                svg{
+                    width: 15vw;
+                    height: 15vw;
+                    position: absolute;
+                    padding: 1vw;
+                    border: 1vw solid $color-dark;
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
+    
+            .iconnames{
+                position: absolute;
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 2vw;
+                width: 100%;
+                top: 16vw;
+                left: 0%;
+                z-index: -2;
+    
+                span{
+                    width: 15vw;
+                    height: 5vw;
+                    margin: 20vw 0 0 3.5vw;
+                    display: flex;
+                    justify-content: center;
+                    
+                    &:nth-child(-n+5) {
+                        margin-top: 0;
+                    }
+                }
             }
         }
+        
 
             
     @include landscape {
@@ -402,17 +402,18 @@ nav.desktopnav{
             top: 20%;
             span{
                 padding: 0 15% 0 0;
-            }
-            .battery, .bluetooth, .network, .wifi{
-                fill: $color-light;
-                height: 3.2vh;
-                width: 3.2vh;
-                position: absolute;
-                top: 10%;
+                
+                svg{
+                     fill: $color-light;
+                     height: 3.2vh;
+                     width: 3.2vh;
+                     position: absolute;
+                     top: 10%;
+                 }
             }
             .navtime{
                 color: $color-light;
-                font-size: 1.5rem;
+                font-size: 1.7vw;
                 
             }
         }
