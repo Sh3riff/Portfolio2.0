@@ -38,18 +38,12 @@ svg {
 
 .toptray {
   height: 3%;
-  width: 84%;
-  left: 8%;
+  width: 90%;
+  left: 5%;
   background-color: transparent;
   position: absolute;
-  margin-top: 1%;
+  margin-top: .5%;
   z-index: 1;
-}
-
-@media (min-width: 600px) {
-  .toptray {
-    margin-top: 0.2%;
-  }
 }
 
 @media (orientation: landscape) {
@@ -60,13 +54,8 @@ svg {
 
 .toptray time {
   color: #000c18;
+  font-size: 4vw;
   padding-right: 63%;
-}
-
-@media (min-width: 600px) {
-  .toptray time {
-    padding-right: 70%;
-  }
 }
 
 .toptray span {
@@ -79,15 +68,8 @@ svg {
 
 .toptray .battery, .toptray .bluetooth, .toptray .network, .toptray .wifi {
   fill: #000c18;
-  height: 15px;
-  width: 15px;
-}
-
-@media (min-width: 600px) {
-  .toptray .battery, .toptray .bluetooth, .toptray .network, .toptray .wifi {
-    height: 25px;
-    width: 25px;
-  }
+  height: 4vw;
+  width: 4vw;
 }
 
 .phonebtn {
@@ -165,42 +147,12 @@ svg {
 }
 
 #homePage .hometime .maintime, nav.phonenav .hometime .maintime, nav.desktopnav .hometime .maintime {
-  font-size: 3rem;
+  font-size: 7.5vh;
   display: block;
 }
 
-@media (min-width: 600px) {
-  #homePage .hometime .maintime, nav.phonenav .hometime .maintime, nav.desktopnav .hometime .maintime {
-    font-size: 5rem;
-  }
-}
-
-@media (min-width: 800px) {
-  #homePage .hometime .maintime, nav.phonenav .hometime .maintime, nav.desktopnav .hometime .maintime {
-    font-size: 7.5rem;
-  }
-}
-
-@media (orientation: landscape) {
-  #homePage .hometime .maintime, nav.phonenav .hometime .maintime, nav.desktopnav .hometime .maintime {
-    font-size: 3rem;
-  }
-}
-
 #homePage .hometime .maindate, nav.phonenav .hometime .maindate, nav.desktopnav .hometime .maindate {
-  font-size: 1rem;
-}
-
-@media (min-width: 600px) {
-  #homePage .hometime .maindate, nav.phonenav .hometime .maindate, nav.desktopnav .hometime .maindate {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 800px) {
-  #homePage .hometime .maindate, nav.phonenav .hometime .maindate, nav.desktopnav .hometime .maindate {
-    font-size: 2.5rem;
-  }
+  font-size: 2.5vh;
 }
 
 #homePage .user, nav.phonenav .user, nav.desktopnav .user {
@@ -226,46 +178,24 @@ svg {
 #homePage .user .greet, nav.phonenav .user .greet, nav.desktopnav .user .greet {
   color: white;
   font-size: 1.2rem;
-}
-
-@media (min-width: 600px) {
-  #homePage .user .greet, nav.phonenav .user .greet, nav.desktopnav .user .greet {
-    font-size: 1.8rem;
-  }
-}
-
-@media (min-width: 800px) {
-  #homePage .user .greet, nav.phonenav .user .greet, nav.desktopnav .user .greet {
-    font-size: 2.7rem;
-  }
+  font-size: 3vh;
 }
 
 @media (orientation: landscape) {
   #homePage .user .greet, nav.phonenav .user .greet, nav.desktopnav .user .greet {
-    font-size: 2.2rem;
+    font-size: 4vh;
   }
 }
 
 #homePage .user .name, nav.phonenav .user .name, nav.desktopnav .user .name {
   color: white;
   font-size: 3rem;
-}
-
-@media (min-width: 600px) {
-  #homePage .user .name, nav.phonenav .user .name, nav.desktopnav .user .name {
-    font-size: 4.5rem;
-  }
-}
-
-@media (min-width: 800px) {
-  #homePage .user .name, nav.phonenav .user .name, nav.desktopnav .user .name {
-    font-size: 7rem;
-  }
+  font-size: 7vh;
 }
 
 @media (orientation: landscape) {
   #homePage .user .name, nav.phonenav .user .name, nav.desktopnav .user .name {
-    font-size: 5rem;
+    font-size: 12vh;
   }
 }
 
@@ -289,46 +219,24 @@ svg {
 }
 
 #homePage .abt .intro, nav.phonenav .abt .intro, nav.desktopnav .abt .intro {
-  font-size: 1rem;
-}
-
-@media (min-width: 600px) {
-  #homePage .abt .intro, nav.phonenav .abt .intro, nav.desktopnav .abt .intro {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 800px) {
-  #homePage .abt .intro, nav.phonenav .abt .intro, nav.desktopnav .abt .intro {
-    font-size: 2.2rem;
-  }
+  font-size: 2.2vh;
 }
 
 @media (orientation: landscape) {
   #homePage .abt .intro, nav.phonenav .abt .intro, nav.desktopnav .abt .intro {
-    font-size: 1.5rem;
+    font-size: 3.5vh;
   }
 }
 
 #homePage .abt .moreintro, nav.phonenav .abt .moreintro, nav.desktopnav .abt .moreintro {
   font-size: 1.5rem;
-}
-
-@media (min-width: 600px) {
-  #homePage .abt .moreintro, nav.phonenav .abt .moreintro, nav.desktopnav .abt .moreintro {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 800px) {
-  #homePage .abt .moreintro, nav.phonenav .abt .moreintro, nav.desktopnav .abt .moreintro {
-    font-size: 3.5rem;
-  }
+  font-size: 4vh;
 }
 
 @media (orientation: landscape) {
   #homePage .abt .moreintro, nav.phonenav .abt .moreintro, nav.desktopnav .abt .moreintro {
     font-size: 2.5rem;
+    font-size: 6vh;
   }
 }
 
@@ -341,11 +249,11 @@ nav.phonenav {
 nav.phonenav .searchfield {
   width: 80%;
   height: 6vh;
-  border: 5px solid #5a1426;
+  border: 0.6vh solid #5a1426;
   border-radius: 3vh;
   background-color: #000c18;
   color: white;
-  font-size: 1.5rem;
+  font-size: 2.5vh;
   padding: 10px;
   position: relative;
   left: 10%;
@@ -462,18 +370,8 @@ nav.desktopnav .innerdesktopnav .appicons span {
   padding: 0 5% 0 0;
 }
 
-nav.desktopnav .innerdesktopnav .appicons .sh3rifficon {
-  background-color: white;
-  border: 1px #5a1426 solid;
-  border-radius: 50%;
-  padding: 2px;
-}
-
-nav.desktopnav .innerdesktopnav .appicons .calculator, nav.desktopnav .innerdesktopnav .appicons .settings, nav.desktopnav .innerdesktopnav .appicons .windows {
+nav.desktopnav .innerdesktopnav .appicons svg {
   fill: white;
-}
-
-nav.desktopnav .innerdesktopnav .appicons .sh3rifficon, nav.desktopnav .innerdesktopnav .appicons .calculator, nav.desktopnav .innerdesktopnav .appicons .settings, nav.desktopnav .innerdesktopnav .appicons .windows {
   height: 80%;
   width: 6.4vh;
   position: absolute;

@@ -39,16 +39,12 @@ svg {
 
 .toptray {
     height: 3%;
-    width: 84%;
-    left: 8%;
+    width: 90%;
+    left: 5%;
     background-color: transparent;
     position: absolute;
-    margin-top: 1%;
+    margin-top: .5%;
     z-index: 1;
-
-    @include tabmini{
-        margin-top: 0.2%;
-    }
 
     @include landscape {
         display: none;
@@ -56,10 +52,8 @@ svg {
 
     time{
         color: $color-dark;
+        font-size: 4vw;
         padding-right: 63%;
-        @include tabmini {
-            padding-right: 70%;
-        }
     }
     span {
         padding: 0 7% 0 0;
@@ -71,13 +65,8 @@ svg {
     
     .battery, .bluetooth, .network, .wifi{
         fill: $color-dark;
-        height: 15px;
-        width: 15px;
-
-        @include tabmini{
-            height: 25px;
-            width: 25px;
-        }
+        height: 4vw;
+        width: 4vw;
     }
 }
 
@@ -135,33 +124,12 @@ svg {
         }
         
         .maintime {
-            font-size: 3rem;
+            font-size: 7.5vh;
             display: block;
-            
-            @include tabmini{
-                font-size: 5rem;
-            }
-
-            @include tabnorm{
-                font-size: 7.5rem;
-            }
-
-            @include landscape {
-                font-size: 3rem;
-            }
-
         }
 
         .maindate {
-            font-size: 1rem;
-
-            @include tabmini{
-                font-size: 1.5rem;
-            }
-
-            @include tabnorm{
-                font-size: 2.5rem;
-            }
+            font-size: 2.5vh;
         }
     }
 
@@ -178,34 +146,20 @@ svg {
         .greet{
             color: $color-light;
             font-size: 1.2rem;
-
-            @include tabmini{
-                font-size: 1.8rem;
-            }
-
-            @include tabnorm{
-                font-size: 2.7rem;
-            }
+            font-size: 3vh;
 
             @include landscape{
-                font-size: 2.2rem;
+                font-size: 4vh;
             }
         }
 
         .name{
             color: $color-light;
             font-size: 3rem;
-
-            @include tabmini{
-                font-size: 4.5rem;
-            }
-
-            @include tabnorm{
-                font-size: 7rem;
-            }
+            font-size: 7vh;
 
             @include landscape {
-                font-size: 5rem;
+                font-size: 12vh;
             }
         }
     }
@@ -220,34 +174,20 @@ svg {
         align-items: center;
         
         .intro{
-            font-size: 1rem;
-
-            @include tabmini{
-                font-size: 2rem;
-            }
-
-            @include tabnorm{
-                font-size: 2.2rem;
-            }
+            font-size: 2.2vh;
 
             @include landscape{
-                font-size: 1.5rem;
+                font-size: 3.5vh;
             }
         }
 
         .moreintro{
             font-size: 1.5rem;
-
-            @include tabmini{
-                font-size: 2.5rem;
-            }
-
-            @include tabnorm{
-                font-size: 3.5rem;
-            }
-
+            font-size: 4vh;
+           
             @include landscape {
                 font-size: 2.5rem;
+                font-size: 6vh;
             }
         }
 
@@ -266,11 +206,11 @@ nav.phonenav{
         .searchfield{
             width: 80%;
             height: 6vh;
-            border: 5px solid $color-accent;
+            border: .6vh solid $color-accent;
             border-radius: 3vh;
             background-color: $color-dark;
             color: $color-light;
-            font-size: 1.5rem;
+            font-size: 2.5vh;
             padding: 10px;
             position: relative;
             left: 10%;
@@ -375,23 +315,12 @@ nav.desktopnav{
                 padding: 0 5% 0 0;
             }
 
-            .sh3rifficon {
-                background-color: $color-light;
-                border: 1px $color-accent solid;
-                border-radius: 50%;
-                padding: 2px;
-            }
-
-            .calculator, .settings, .windows {
+            svg{
                 fill: $color-light;
-            }
-
-            .sh3rifficon, .calculator, .settings, .windows {
                 height: 80%;
                 width: 6.4vh;
                 position: absolute;
             }
-
         }
 
         .navtray{
