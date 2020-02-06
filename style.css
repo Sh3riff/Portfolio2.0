@@ -280,11 +280,11 @@ nav.phonenav .appid .appicons {
 nav.phonenav .appid .appicons span {
   height: 15vw;
   width: 15vw;
-  margin: 10vw 0 0 3.5vw;
+  margin: 0 0 10vw 3.5vw;
 }
 
-nav.phonenav .appid .appicons span:nth-child(-n+5) {
-  margin-top: 0;
+nav.phonenav .appid .appicons span:nth-last-child(-n +5) {
+  margin-bottom: 0;
 }
 
 nav.phonenav .appid .appicons svg {
@@ -314,7 +314,7 @@ nav.phonenav .appid .iconnames {
 nav.phonenav .appid .iconnames span {
   width: 15vw;
   height: 5vw;
-  margin: 20vw 0 0 3.5vw;
+  margin: 0 0 20vw 3.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,8 +323,8 @@ nav.phonenav .appid .iconnames span {
           justify-content: center;
 }
 
-nav.phonenav .appid .iconnames span:nth-child(-n+5) {
-  margin-top: 0;
+nav.phonenav .appid .iconnames span:nth-last-child(-n +5) {
+  margin-bottom: 0;
 }
 
 @media (orientation: landscape) {

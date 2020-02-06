@@ -232,10 +232,10 @@ nav.phonenav{
                 span{
                     height: 15vw;
                     width: 15vw;
-                    margin: 10vw 0 0 3.5vw;
+                    margin: 0 0 10vw 3.5vw;
 
-                    &:nth-child(-n+5) {
-                        margin-top: 0;
+                    &:nth-last-child(-n +5) {
+                        margin-bottom: 0;
                     }
                 }
                      
@@ -263,12 +263,12 @@ nav.phonenav{
                 span{
                     width: 15vw;
                     height: 5vw;
-                    margin: 20vw 0 0 3.5vw;
+                    margin: 0 0 20vw 3.5vw;
                     display: flex;
                     justify-content: center;
                     
-                    &:nth-child(-n+5) {
-                        margin-top: 0;
+                    &:nth-last-child(-n +5) {
+                        margin-bottom: 0;
                     }
                 }
             }

@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }());
 
-        const appuser = document.querySelector('#appuser');
+    const appuser = document.querySelector('#appuser');
     (function getAppUserName() {
         if(localStorage.getItem('appuser')){
             appuser.innerText = localStorage.getItem('appuser');
@@ -92,5 +92,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
         })
     }());
+
+    const searcher = document.forms['searcher'].querySelector('input')
+    searcher.addEventListener('keyup', e => {
+        const searchInput = e.target.value.toLowerCase();
+        const myApps = document.querySelector('.appicons')
+        const myAppNames = document.querySelector('.iconnames')
+        const listOfApps = myApps.querySelectorAll('span')
+        const listOfAppNames = myAppNames.querySelectorAll('span')
+        listOfApps.forEach(app => {
+            const appId = app.className.toLowerCase();
+            if(appId.indexOf(searchInput) != -1){
+                app.style.display = 'flex'
+            }else {
+                app.style.display = 'none'
+            }
+        })
+        listOfAppNames.forEach(app => {
+            const appId = app.className.toLowerCase();
+            if(appId.indexOf(searchInput) != -1){
+                app.style.display = 'flex'
+            }else {
+                app.style.display = 'none'
+            }
+        })
+    })
+
+    // const myApps = document.querySelector('.appicons')
+    // myApps.addEventListener('click', e =>{
+    //     console.log(e.target);
+    //     console.log(e.target.className);
+    // })
 
 })
