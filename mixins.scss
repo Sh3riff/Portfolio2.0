@@ -16,3 +16,9 @@
     }
 }
 
+@mixin aspectRatio16-9 {
+   @media (max-aspect-ratio: 16/9) {
+       @content;
+   } 
+}
+

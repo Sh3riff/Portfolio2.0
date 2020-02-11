@@ -118,10 +118,22 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    // const myApps = document.querySelector('.appicons')
-    // myApps.addEventListener('click', e =>{
-    //     console.log(e.target);
-    //     console.log(e.target.className);
-    // })
+    
+    (function appLauncher() {
+        let apps = document.querySelectorAll('.appicons')
+        let action = e =>{
+            if(e.target.tagName === 'SPAN'){
+                console.log(`${e.target.className}`)
+            }
+        }
+        apps.forEach(child => {
+            child.addEventListener('click', action)
+        })
+        apps.forEach(child => {
+            child.addEventListener('mouseover', action)
+        })
+    }());
+
+
 
 })

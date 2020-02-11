@@ -62,11 +62,11 @@ svg {
   padding: 0 7% 0 0;
 }
 
-.toptray .last {
+.toptray span:last-child {
   padding: 0;
 }
 
-.toptray .battery, .toptray .bluetooth, .toptray .network, .toptray .wifi {
+.toptray span svg {
   fill: #000c18;
   height: 4vw;
   width: 4vw;
@@ -287,10 +287,9 @@ nav.phonenav .appid .appicons span:nth-last-child(-n +5) {
   margin-bottom: 0;
 }
 
-nav.phonenav .appid .appicons svg {
+nav.phonenav .appid .appicons span svg {
   width: 15vw;
   height: 15vw;
-  position: absolute;
   padding: 1vw;
   border: 1vw solid #000c18;
   border-radius: 50%;
@@ -356,49 +355,57 @@ nav.desktopnav .innerdesktopnav {
   top: 10%;
   background-color: #000c18;
   border-radius: 4vh;
+  z-index: -2;
 }
 
 nav.desktopnav .innerdesktopnav .appicons {
   position: absolute;
   height: 100%;
-  width: 84%;
+  width: 82%;
   left: 1%;
-  top: 15%;
+  top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 nav.desktopnav .innerdesktopnav .appicons span {
-  padding: 0 5% 0 0;
+  height: 90%;
+  width: 3.5vw;
+  margin: 0  .5vw 0 0;
+  background-color: transparent;
 }
 
-nav.desktopnav .innerdesktopnav .appicons svg {
+nav.desktopnav .innerdesktopnav .appicons span svg {
   fill: white;
   height: 80%;
-  width: 6.4vh;
-  position: absolute;
+  width: 3.5vw;
+  z-index: -1;
 }
 
 nav.desktopnav .innerdesktopnav .navtray {
   height: 60%;
-  width: 15%;
+  width: 17%;
   position: absolute;
   right: 0;
   top: 20%;
 }
 
 nav.desktopnav .innerdesktopnav .navtray span {
-  padding: 0 15% 0 0;
+  margin: 0 15% 0 0;
 }
 
 nav.desktopnav .innerdesktopnav .navtray span svg {
   fill: white;
-  height: 3.2vh;
-  width: 3.2vh;
+  height: 80%;
+  width: 1.5vw;
   position: absolute;
   top: 10%;
 }
 
 nav.desktopnav .innerdesktopnav .navtray .navtime {
   color: white;
-  font-size: 1.7vw;
+  font-size: 3vh;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

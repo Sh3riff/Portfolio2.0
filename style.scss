@@ -57,17 +57,17 @@ svg {
     }
     span {
         padding: 0 7% 0 0;
+        &:last-child{
+            padding: 0;
+        }
+
+        svg{
+            fill: $color-dark;
+            height: 4vw;
+            width: 4vw;
+        }
     }
 
-    .last {
-        padding: 0;
-    }
-    
-    .battery, .bluetooth, .network, .wifi{
-        fill: $color-dark;
-        height: 4vw;
-        width: 4vw;
-    }
 }
 
 
@@ -237,17 +237,16 @@ nav.phonenav{
                     &:nth-last-child(-n +5) {
                         margin-bottom: 0;
                     }
+                    svg{
+                        width: 15vw;
+                        height: 15vw;
+                        padding: 1vw;
+                        border: 1vw solid $color-dark;
+                        border-radius: 50%;
+                        z-index: -1;
+                    }
                 }
                      
-                svg{
-                    width: 15vw;
-                    height: 15vw;
-                    position: absolute;
-                    padding: 1vw;
-                    border: 1vw solid $color-dark;
-                    border-radius: 50%;
-                    z-index: -1;
-                }
             }
     
             .iconnames{
@@ -303,47 +302,52 @@ nav.desktopnav{
         top: 10%;
         background-color: $color-dark;
         border-radius: 4vh;
+        z-index: -2;
 
         .appicons{
             position: absolute;
             height: 100%;
-            width: 84%;
+            width: 82%;
             left: 1%;
-            top: 15%;
+            top: 10%;
+            display: flex;
 
             span{
-                padding: 0 5% 0 0;
+                height: 90%;
+                width: 3.5vw;
+                margin: 0  .5vw 0 0 ;
+                background-color: transparent;
+                svg{
+                    fill: $color-light;
+                    height: 80%;
+                    width: 3.5vw;
+                    z-index: -1;
+                }
             }
 
-            svg{
-                fill: $color-light;
-                height: 80%;
-                width: 6.4vh;
-                position: absolute;
-            }
         }
 
         .navtray{
             height: 60%;
-            width: 15%;
+            width: 17%;
             position: absolute;
             right: 0;
             top: 20%;
             span{
-                padding: 0 15% 0 0;
+                margin: 0 15% 0 0;
                 
                 svg{
                      fill: $color-light;
-                     height: 3.2vh;
-                     width: 3.2vh;
+                     height: 80%;
+                     width: 1.5vw;
                      position: absolute;
                      top: 10%;
                  }
             }
             .navtime{
                 color: $color-light;
-                font-size: 1.7vw;
-                
+                font-size: 3vh;
+                position: absolute;                     
             }
         }
     }
