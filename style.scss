@@ -16,7 +16,6 @@
 
 svg {
     position: absolute;
-    // pointer-events: none;
 }
 
 
@@ -261,7 +260,6 @@ nav.appnav{
     position: relative;
     top: 5%;
     height: calc(95% - 18vw);
-    // background-image: url(./img.jpg);
     @include landscape{
         top: 6%;
         height: 94%;

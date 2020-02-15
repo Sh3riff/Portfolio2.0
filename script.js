@@ -113,16 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(`${e.target.closest('svg').classList} for phones`)
             }
         }
-        // let appAction = e =>{
-        //     if(e.target.tagName === 'SPAN'){
-        //         console.log(`${e.target.classList} for phones`)
-        //     }
-        // }
 
         app.forEach(child => {
             child.addEventListener('click', appAction)
         })
-
 
     }());
 
