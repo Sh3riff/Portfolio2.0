@@ -4,13 +4,8 @@
   list-style-type: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #000c18;
   font-family: 'Gugi', cursive;
   outline: none;
-}
-
-.show {
-  display: block;
 }
 
 .unshow {
@@ -24,9 +19,11 @@ svg {
 .container {
   height: 100vh;
   width: 100vw;
-  border: 2vw solid #5a1426;
+  border: 2vw solid #800000;
   border-radius: 10vw;
   position: relative;
+  color: #000040;
+  fill: #000040;
 }
 
 @media (orientation: landscape) {
@@ -46,14 +43,7 @@ svg {
   z-index: 1;
 }
 
-@media (orientation: landscape) {
-  .toptray {
-    display: none;
-  }
-}
-
 .toptray time {
-  color: #000c18;
   font-size: 4vw;
   padding-right: 63%;
 }
@@ -67,13 +57,47 @@ svg {
 }
 
 .toptray span svg {
-  fill: #000c18;
   height: 4vw;
   width: 4vw;
 }
 
-.phonebtn {
-  border: 0.6vw solid #5a1426;
+@media (orientation: landscape) {
+  .toptray {
+    height: 6%;
+    width: 17vw;
+    left: 83%;
+    margin-top: 0;
+  }
+  .toptray span {
+    margin: 0 7% 0 0;
+  }
+  .toptray span svg {
+    height: 100%;
+    width: 10%;
+  }
+  .toptray time {
+    font-size: 4vh;
+    padding: 0;
+    margin: 0 3% 0 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.navswitch {
+  height: 18vw;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 8vw 8vw;
+}
+
+.navswitch .windows {
+  display: none;
+}
+
+.navswitch .homebtn {
+  border: 0.6vw solid #800000;
   width: 15vw;
   height: 15vw;
   border-radius: 50%;
@@ -91,37 +115,66 @@ svg {
           align-items: center;
 }
 
-@media (orientation: landscape) {
-  .phonebtn {
-    display: none;
-  }
-}
-
-.phonebtn .switch {
-  background-color: #000c18;
+.navswitch .homebtn .switch {
+  background-color: #000040;
   width: 13vw;
   height: 13vw;
   border-radius: 50%;
 }
 
-.phonebtn .switch input {
+.navswitch .homebtn .switch input {
   opacity: 0;
 }
 
-#homePage, nav.phonenav, nav.desktopnav {
-  height: calc(100% - 18vw);
-  width: 100%;
-  border-bottom: 0.5vh solid #000c18;
-}
-
 @media (orientation: landscape) {
-  #homePage, nav.phonenav, nav.desktopnav {
-    height: 90%;
+  .navswitch .homebtn {
+    height: 6vh;
+    width: 6vh;
+    border: none;
+    left: 0;
+    margin: 0 0 0 1vw;
+  }
+  .navswitch .homebtn .switch {
+    height: 6vh;
+    width: 6vh;
     border-radius: 0;
+    background-color: transparent;
   }
 }
 
-#homePage .hometime, nav.phonenav .hometime, nav.desktopnav .hometime {
+@media (orientation: landscape) {
+  .navswitch {
+    height: 6%;
+    border-radius: 0;
+    top: 0;
+    background-color: #e0e0e0;
+  }
+  .navswitch .windows {
+    display: inline;
+    margin: 0 0 0 1vw;
+  }
+  .navswitch .windows svg {
+    height: 6vh;
+    width: 6vh;
+  }
+}
+
+.apphome, nav.appnav {
+  height: calc(100% - 18vw);
+  width: 100%;
+  border-bottom: 0.5vh solid #000040;
+}
+
+@media (orientation: landscape) {
+  .apphome, nav.appnav {
+    height: 94%;
+    position: absolute;
+    top: 6%;
+    border-bottom: none;
+  }
+}
+
+.apphome .hometime, nav.appnav .hometime {
   height: 20%;
   position: relative;
   top: 15%;
@@ -141,22 +194,22 @@ svg {
 }
 
 @media (orientation: landscape) {
-  #homePage .hometime, nav.phonenav .hometime, nav.desktopnav .hometime {
+  .apphome .hometime, nav.appnav .hometime {
     top: 10%;
   }
 }
 
-#homePage .hometime .maintime, nav.phonenav .hometime .maintime, nav.desktopnav .hometime .maintime {
+.apphome .hometime .maintime, nav.appnav .hometime .maintime {
   font-size: 7.5vh;
   display: block;
 }
 
-#homePage .hometime .maindate, nav.phonenav .hometime .maindate, nav.desktopnav .hometime .maindate {
+.apphome .hometime .maindate, nav.appnav .hometime .maindate {
   font-size: 2.5vh;
 }
 
-#homePage .user, nav.phonenav .user, nav.desktopnav .user {
-  background-color: #000c18;
+.apphome .user, nav.appnav .user {
+  background-color: #000040;
   height: 40%;
   position: relative;
   top: 15%;
@@ -175,31 +228,31 @@ svg {
           align-items: center;
 }
 
-#homePage .user .greet, nav.phonenav .user .greet, nav.desktopnav .user .greet {
+.apphome .user .greet, nav.appnav .user .greet {
   color: white;
   font-size: 1.2rem;
   font-size: 3vh;
 }
 
 @media (orientation: landscape) {
-  #homePage .user .greet, nav.phonenav .user .greet, nav.desktopnav .user .greet {
+  .apphome .user .greet, nav.appnav .user .greet {
     font-size: 4vh;
   }
 }
 
-#homePage .user .name, nav.phonenav .user .name, nav.desktopnav .user .name {
+.apphome .user .name, nav.appnav .user .name {
   color: white;
   font-size: 3rem;
   font-size: 7vh;
 }
 
 @media (orientation: landscape) {
-  #homePage .user .name, nav.phonenav .user .name, nav.desktopnav .user .name {
+  .apphome .user .name, nav.appnav .user .name {
     font-size: 12vh;
   }
 }
 
-#homePage .abt, nav.phonenav .abt, nav.desktopnav .abt {
+.apphome .abt, nav.appnav .abt {
   position: relative;
   top: 15%;
   height: 25%;
@@ -218,40 +271,47 @@ svg {
           align-items: center;
 }
 
-#homePage .abt .intro, nav.phonenav .abt .intro, nav.desktopnav .abt .intro {
+.apphome .abt .intro, nav.appnav .abt .intro {
   font-size: 2.2vh;
 }
 
 @media (orientation: landscape) {
-  #homePage .abt .intro, nav.phonenav .abt .intro, nav.desktopnav .abt .intro {
+  .apphome .abt .intro, nav.appnav .abt .intro {
     font-size: 3.5vh;
   }
 }
 
-#homePage .abt .moreintro, nav.phonenav .abt .moreintro, nav.desktopnav .abt .moreintro {
+.apphome .abt .moreintro, nav.appnav .abt .moreintro {
   font-size: 1.5rem;
   font-size: 4vh;
 }
 
 @media (orientation: landscape) {
-  #homePage .abt .moreintro, nav.phonenav .abt .moreintro, nav.desktopnav .abt .moreintro {
+  .apphome .abt .moreintro, nav.appnav .abt .moreintro {
     font-size: 2.5rem;
     font-size: 6vh;
   }
 }
 
-nav.phonenav {
+nav.appnav {
   position: relative;
   top: 5%;
   height: calc(95% - 18vw);
 }
 
-nav.phonenav .searchfield {
+@media (orientation: landscape) {
+  nav.appnav {
+    top: 6%;
+    height: 94%;
+  }
+}
+
+nav.appnav .searchfield {
   width: 80%;
   height: 6vh;
-  border: 0.6vh solid #5a1426;
+  border: 0.6vh solid #800000;
   border-radius: 3vh;
-  background-color: #000c18;
+  background-color: #000040;
   color: white;
   font-size: 2.5vh;
   padding: 10px;
@@ -260,7 +320,13 @@ nav.phonenav .searchfield {
   margin-bottom: 2vh;
 }
 
-nav.phonenav .appid {
+@media (orientation: landscape) {
+  nav.appnav .searchfield {
+    display: none;
+  }
+}
+
+nav.appnav .appid {
   position: relative;
   height: calc(84vh - 18vw);
   width: 100%;
@@ -268,7 +334,20 @@ nav.phonenav .appid {
   overflow-x: hidden;
 }
 
-nav.phonenav .appid .appicons {
+@media (orientation: landscape) {
+  nav.appnav .appid {
+    background-color: #e0e0e0;
+    border-radius: 20vh;
+    height: 15vh;
+    width: 50vw;
+    position: absolute;
+    bottom: 10vh;
+    left: 25vw;
+    padding: 0 5vw;
+  }
+}
+
+nav.appnav .appid .appicons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,26 +356,45 @@ nav.phonenav .appid .appicons {
   overflow: auto;
 }
 
-nav.phonenav .appid .appicons span {
+nav.appnav .appid .appicons span {
   height: 15vw;
   width: 15vw;
   margin: 0 0 10vw 3.5vw;
 }
 
-nav.phonenav .appid .appicons span:nth-last-child(-n +5) {
+nav.appnav .appid .appicons span:nth-last-child(-n +5) {
   margin-bottom: 0;
 }
 
-nav.phonenav .appid .appicons span svg {
+nav.appnav .appid .appicons span svg {
   width: 15vw;
   height: 15vw;
   padding: 1vw;
-  border: 1vw solid #000c18;
+  border: 1vw solid #000040;
   border-radius: 50%;
-  z-index: -1;
+  cursor: pointer;
 }
 
-nav.phonenav .appid .iconnames {
+@media (orientation: landscape) {
+  nav.appnav .appid .appicons span {
+    height: 5vw;
+    width: 5vw;
+    margin: 0;
+  }
+  nav.appnav .appid .appicons span svg {
+    height: 4vw;
+    width: 4vw;
+    padding: 0.25vw;
+    border: none;
+    top: calc((15vh - 4vw) / 2);
+  }
+  nav.appnav .appid .appicons span svg:hover {
+    -webkit-transform: scale(2, 2);
+            transform: scale(2, 2);
+  }
+}
+
+nav.appnav .appid .iconnames {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,7 +408,13 @@ nav.phonenav .appid .iconnames {
   z-index: -2;
 }
 
-nav.phonenav .appid .iconnames span {
+@media (orientation: landscape) {
+  nav.appnav .appid .iconnames {
+    display: none;
+  }
+}
+
+nav.appnav .appid .iconnames span {
   width: 15vw;
   height: 5vw;
   margin: 0 0 20vw 3.5vw;
@@ -322,90 +426,7 @@ nav.phonenav .appid .iconnames span {
           justify-content: center;
 }
 
-nav.phonenav .appid .iconnames span:nth-last-child(-n +5) {
+nav.appnav .appid .iconnames span:nth-last-child(-n +5) {
   margin-bottom: 0;
-}
-
-@media (orientation: landscape) {
-  nav.phonenav {
-    display: none;
-  }
-}
-
-nav.desktopnav {
-  display: none;
-}
-
-@media (orientation: landscape) {
-  nav.desktopnav {
-    display: block;
-    height: 10%;
-    padding: 0;
-    position: fixed;
-    bottom: 0;
-    background-color: #5a1426;
-  }
-}
-
-nav.desktopnav .innerdesktopnav {
-  width: 98%;
-  height: 80%;
-  position: relative;
-  left: 1%;
-  top: 10%;
-  background-color: #000c18;
-  border-radius: 4vh;
-  z-index: -2;
-}
-
-nav.desktopnav .innerdesktopnav .appicons {
-  position: absolute;
-  height: 100%;
-  width: 82%;
-  left: 1%;
-  top: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav.desktopnav .innerdesktopnav .appicons span {
-  height: 90%;
-  width: 3.5vw;
-  margin: 0  .5vw 0 0;
-  background-color: transparent;
-}
-
-nav.desktopnav .innerdesktopnav .appicons span svg {
-  fill: white;
-  height: 80%;
-  width: 3.5vw;
-  z-index: -1;
-}
-
-nav.desktopnav .innerdesktopnav .navtray {
-  height: 60%;
-  width: 17%;
-  position: absolute;
-  right: 0;
-  top: 20%;
-}
-
-nav.desktopnav .innerdesktopnav .navtray span {
-  margin: 0 15% 0 0;
-}
-
-nav.desktopnav .innerdesktopnav .navtray span svg {
-  fill: white;
-  height: 80%;
-  width: 1.5vw;
-  position: absolute;
-  top: 10%;
-}
-
-nav.desktopnav .innerdesktopnav .navtray .navtime {
-  color: white;
-  font-size: 3vh;
-  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

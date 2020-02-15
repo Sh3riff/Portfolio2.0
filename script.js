@@ -3,21 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         screen.orientation.lock('natural');
 
-    const phonebtn = document.querySelector('#phonebtn');
-    phonebtn.addEventListener('change', e => {
-        const menuPage = document.querySelector('#mobileNav');
-        const phoneHome = document.querySelector('#homePage');
-        if(phonebtn.checked){           
-            phoneHome.classList.remove('show')
-            phoneHome.classList.add('unshow')
-            menuPage.classList.remove('unshow')
-            menuPage.classList.add('show')
-        }else {
-            menuPage.classList.remove('show')
-            menuPage.classList.add('unshow')
-            phoneHome.classList.remove('unshow')
-            phoneHome.classList.add('show')
-        }
+    const homebtn = document.querySelector('#homebtn');
+    homebtn.addEventListener('change', e => {
+        document.querySelector('.appnav').classList.toggle('unshow');
+        document.querySelector('.apphome').classList.toggle('unshow');
     });
 
     (function showTime (){
@@ -40,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         const hf = hourFormat;
         const traytime = document.querySelector('.traytime');
-        const navtime = document.querySelector('.navtime');
         const maintime = document.querySelector('.maintime');
         const maindate = document.querySelector('.maindate');
         let sec = timeNow.getSeconds();
@@ -51,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let fulldate = timeNow.toDateString();
         let fulltime = timeNow.toLocaleTimeString();        
         traytime.innerHTML = `${hrMin}`;
-        navtime.innerHTML = `${hrMin}`;
         maintime.innerHTML = `${hrMinSec}`;
         maindate.innerHTML = `${fulldate}`;
         setTimeout(showTime, 1000);
@@ -120,18 +107,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     (function appLauncher() {
-        let apps = document.querySelectorAll('.appicons')
-        let action = e =>{
-            if(e.target.tagName === 'SPAN'){
-                console.log(`${e.target.className}`)
+        let app = document.querySelectorAll('.appnav .appicons')
+        let appAction = e =>{
+            if(e.target.closest('svg')){
+                console.log(`${e.target.closest('svg').classList} for phones`)
             }
         }
-        apps.forEach(child => {
-            child.addEventListener('click', action)
+        // let appAction = e =>{
+        //     if(e.target.tagName === 'SPAN'){
+        //         console.log(`${e.target.classList} for phones`)
+        //     }
+        // }
+
+        app.forEach(child => {
+            child.addEventListener('click', appAction)
         })
-        apps.forEach(child => {
-            child.addEventListener('mouseover', action)
-        })
+
+
     }());
 
 
