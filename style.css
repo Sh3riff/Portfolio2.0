@@ -33,6 +33,22 @@ svg {
   }
 }
 
+.container:-webkit-full-screen {
+  background-color: white;
+}
+
+.container:-moz-full-screen {
+  background-color: white;
+}
+
+.container:-ms-fullscreen {
+  background-color: white;
+}
+
+.container:fullscreen {
+  background-color: white;
+}
+
 .toptray {
   height: 3%;
   width: 90%;
@@ -297,6 +313,8 @@ nav.appnav {
   position: relative;
   top: 5%;
   height: calc(95% - 18vw);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @media (orientation: landscape) {
@@ -344,6 +362,7 @@ nav.appnav .appid {
     bottom: 10vh;
     left: 25vw;
     padding: 0 5vw;
+    overflow: none;
   }
 }
 

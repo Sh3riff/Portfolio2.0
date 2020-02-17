@@ -1,13 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    (function fullScreen(){
+        document.addEventListener('click', ()=> {
+            if(document.documentElement.requestFullscreen){
+                document.querySelector(".container").requestFullscreen();
+            }
+            screen.orientation.lock('natural');
+        });
+            
+    }());
 
+    (function homebtn(){
+        document.querySelector('#homebtn').addEventListener('change', e => {
+            document.querySelector('.appnav').classList.toggle('unshow');
+            document.querySelector('.apphome').classList.toggle('unshow');
+        });
+    }());
 
-        screen.orientation.lock('natural');
-
-    const homebtn = document.querySelector('#homebtn');
-    homebtn.addEventListener('change', e => {
-        document.querySelector('.appnav').classList.toggle('unshow');
-        document.querySelector('.apphome').classList.toggle('unshow');
-    });
 
     (function showTime (){
         let timeNow = new Date();
@@ -80,30 +89,31 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }());
 
-    const searcher = document.forms['searcher'].querySelector('input')
-    searcher.addEventListener('keyup', e => {
-        const searchInput = e.target.value.toLowerCase();
-        const myApps = document.querySelector('.appicons')
-        const myAppNames = document.querySelector('.iconnames')
-        const listOfApps = myApps.querySelectorAll('span')
-        const listOfAppNames = myAppNames.querySelectorAll('span')
-        listOfApps.forEach(app => {
-            const appId = app.className.toLowerCase();
-            if(appId.indexOf(searchInput) != -1){
-                app.style.display = 'flex'
-            }else {
-                app.style.display = 'none'
-            }
-        })
-        listOfAppNames.forEach(app => {
-            const appId = app.className.toLowerCase();
-            if(appId.indexOf(searchInput) != -1){
-                app.style.display = 'flex'
-            }else {
-                app.style.display = 'none'
-            }
-        })
-    })
+
+    (function search(){
+        const searcher = document.forms['searcher'].querySelector('input')
+        searcher.addEventListener('keyup', e => {
+            const searchInput = e.target.value.toLowerCase();
+            const listOfApps = document.querySelector('.appicons').querySelectorAll('span')
+            const listOfAppNames = document.querySelector('.iconnames').querySelectorAll('span')
+            listOfApps.forEach(app => {
+                const appId = app.className.toLowerCase();
+                if(appId.indexOf(searchInput) != -1){
+                    app.style.display = 'flex'
+                }else {
+                    app.style.display = 'none'
+                }
+            })
+            listOfAppNames.forEach(app => {
+                const appId = app.className.toLowerCase();
+                if(appId.indexOf(searchInput) != -1){
+                    app.style.display = 'flex'
+                }else {
+                    app.style.display = 'none'
+                }
+            })
+        });
+    }());
 
     
     (function appLauncher() {
