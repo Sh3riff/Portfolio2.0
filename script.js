@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     (function fullScreen(){
-        document.addEventListener('click', ()=> {
-            if(document.documentElement.requestFullscreen){
+        const trigger = document.querySelector('.fullscreen');
+        trigger.addEventListener('click', ()=> {
+            if(document.fullscreen === false){
                 document.querySelector(".container").requestFullscreen();
+                screen.orientation.lock('natural');
+            }else{
+                document.exitFullscreen();
             }
-            screen.orientation.lock('natural');
         });
             
     }());

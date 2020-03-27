@@ -175,6 +175,16 @@ svg {
   }
 }
 
+.fullscreen {
+  height: 10vmin;
+  width: 10vmin;
+  font-size: 10vmin;
+  position: absolute;
+  bottom: 2.5%;
+  right: 5%;
+  z-index: 100;
+}
+
 .apphome, nav.appnav {
   height: calc(100% - 18vw);
   width: 100%;
@@ -209,19 +219,25 @@ svg {
           align-items: center;
 }
 
-@media (orientation: landscape) {
-  .apphome .hometime, nav.appnav .hometime {
-    top: 10%;
-  }
-}
-
 .apphome .hometime .maintime, nav.appnav .hometime .maintime {
-  font-size: 7.5vh;
+  font-size: 14vw;
   display: block;
 }
 
 .apphome .hometime .maindate, nav.appnav .hometime .maindate {
-  font-size: 2.5vh;
+  font-size: 5vw;
+}
+
+@media (orientation: landscape) {
+  .apphome .hometime, nav.appnav .hometime {
+    top: 10%;
+  }
+  .apphome .hometime .maintime, nav.appnav .hometime .maintime {
+    font-size: 5vw;
+  }
+  .apphome .hometime .maindate, nav.appnav .hometime .maindate {
+    font-size: 1.5vw;
+  }
 }
 
 .apphome .user, nav.appnav .user {
@@ -246,25 +262,23 @@ svg {
 
 .apphome .user .greet, nav.appnav .user .greet {
   color: white;
-  font-size: 1.2rem;
-  font-size: 3vh;
+  font-size: 5vw;
 }
 
 @media (orientation: landscape) {
   .apphome .user .greet, nav.appnav .user .greet {
-    font-size: 4vh;
+    font-size: 2vw;
   }
 }
 
 .apphome .user .name, nav.appnav .user .name {
   color: white;
-  font-size: 3rem;
-  font-size: 7vh;
+  font-size: 12vw;
 }
 
 @media (orientation: landscape) {
   .apphome .user .name, nav.appnav .user .name {
-    font-size: 12vh;
+    font-size: 7vw;
   }
 }
 
@@ -288,24 +302,22 @@ svg {
 }
 
 .apphome .abt .intro, nav.appnav .abt .intro {
-  font-size: 2.2vh;
+  font-size: 4vw;
 }
 
 @media (orientation: landscape) {
   .apphome .abt .intro, nav.appnav .abt .intro {
-    font-size: 3.5vh;
+    font-size: 1.7vw;
   }
 }
 
 .apphome .abt .moreintro, nav.appnav .abt .moreintro {
-  font-size: 1.5rem;
-  font-size: 4vh;
+  font-size: 7vw;
 }
 
 @media (orientation: landscape) {
   .apphome .abt .moreintro, nav.appnav .abt .moreintro {
-    font-size: 2.5rem;
-    font-size: 6vh;
+    font-size: 3.5vw;
   }
 }
 
@@ -448,4 +460,3 @@ nav.appnav .appid .iconnames span {
 nav.appnav .appid .iconnames span:nth-last-child(-n +5) {
   margin-bottom: 0;
 }
-/*# sourceMappingURL=style.css.map */
